@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>مزار شهدای گمنام</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap');
+
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+
+body{
+
+font-family:Vazirmatn,Tahoma,sans-serif;
+
+background:
+radial-gradient(circle at top,#145c4d,#03130f 60%);
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+
+
+/* طرح اسلیمی پس زمینه */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+radial-gradient(circle,rgba(212,175,55,.08) 2px,transparent 2px);
+
+background-size:45px 45px;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+
+header{
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+left:0;
+
+padding:18px 25px;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(15px);
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+z-index:100;
+
+}
+
+
+
+.nav{
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.logo{
+
+font-size:22px;
+
+font-weight:900;
+
+color:#f1d37a;
+
+}
+
+
+
+.logo span{
+
+display:block;
+
+font-size:12px;
+
+color:#ddd;
+
+font-weight:400;
+
+}
+
+
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:130px 20px 50px;
+
+position:relative;
+
+}
+
+
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.8)
+),
+
+url("https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+z-index:-1;
+
+}
+
+
+
+.hero-box{
+
+max-width:900px;
+
+padding:50px;
+
+background:
+
+rgba(255,255,255,.08);
+
+border:
+
+1px solid rgba(255,255,255,.2);
+
+border-radius:35px;
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+
+0 30px 80px rgba(0,0,0,.6);
+
+}
+
+
+
+.hero h1{
+
+font-size:60px;
+
+font-weight:900;
+
+color:#f4d98a;
+
+line-height:1.3;
+
+}
+
+
+
+.hero h1 span{
+
+display:block;
+
+color:white;
+
+}
+
+
+
+.hero p{
+
+font-size:20px;
+
+line-height:2;
+
+margin-top:25px;
+
+color:#eee;
+
+}
+
+
+
+.btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:16px 45px;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+45deg,
+#b99532,
+#f5df94
+);
+
+color:#111;
+
+font-weight:800;
+
+}
+<!-- Download Section -->
+
+<section id="download" class="download-section">
+
+<div class="download-box reveal">
+
+<div class="download-content">
+
+<div>
+
+<h2>
+برنامه مزار شهدای گمنام
+</h2>
+
+<p>
+همراهی با یادمان شهدا؛
+دسترسی به برنامه‌های مزار، نواها و ادعیه، کتابخوانی و آزمون.
+</p>
+
+
+<span class="version">
+نسخه 1.0.0
+</span>
+
+</div>
+
+
+<a 
+href="#"
+class="btn btn-primary"
+onclick="alert('به زودی لینک دانلود APK قرار می‌گیرد'); return false;"
+>
+📱 دریافت برنامه
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+<div>
+
+<strong>
+مزار شهدای گمنام
+</strong>
+
+<br>
+
+<span>
+یادشان زنده و راهشان ماندگار 🕊️
+</span>
+
+</div>
+
+
+<div>
+
+طراحی شده با عشق و احترام
+
+</div>
+
+
+</footer>
+
+
+
+
+<script>
+
+
+// Animation on scroll
+
+
+const reveals = document.querySelectorAll(".reveal");
+
+
+const observer = new IntersectionObserver(
+(entries)=>{
+
+
+entries.forEach(
+(entry)=>{
+
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+}
+
+);
+
+
+},
+{
+
+threshold:0.15
+
+}
+
+);
+
+
+
+reveals.forEach(
+(item)=>{
+
+observer.observe(item);
+
+}
+
+);
+
+
+
+</script>
+
+
+</body>
+
+</html>
